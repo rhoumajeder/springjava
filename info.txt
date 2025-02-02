@@ -1,0 +1,92 @@
+mvn spring-boot:run -pl rjespringboot 
+rjespringboot is already deployed to jboss
+rjespringboot2 is already deployed to weblogic
+********
+rjespringboot3 contain keystore 
+in root project :
+mvn spring-boot:run -pl rjespringboot3
+*******
+
+================================================================
+
+to start jboss 
+
+powershell as admin password : admin
+cd C:\Users\rhoum\wildfly-26.1.2.Final\wildfly-26.1.2.Final\bin
+.\standalone.bat
+
+http://localhost:9990/console/index.html
+http://localhost:8080/
+
+stop jboss
+cd C:\Users\rhoum\wildfly-26.1.2.Final\wildfly-26.1.2.Final\bin
+.\jboss-cli.bat --connect command=:shutdown
+
+download installation : from github see the script powershell
+
+
+================================================================
+
+for weblogic 
+
+localhost:7001
+weblogic / password123).
+
+start : 
+./startWebLogic.cmd
+http://localhost:7001/console/login/LoginForm.jsp
+
+cd C:\Oracle\Middleware\user_projects\domains\base_domain\bin
+.\stopWebLogic.cmd
+
+
+
+
+download from here:
+https://www.oracle.com/middleware/technologies/weblogic-server-downloads.html?spm=5aebb161.2ef5001f.0.0.73cbc921178EBx
+
+
+
+and jdk from here :
+https://www.oracle.com/java/technologies/downloads/#java8-windows
+
+
+
+installation
+ .\wlst.cmd C:\Users\rhoum\Desktop\D\avaloq\code\rje2\rje2\python.py
+
+ Domain Creation Success :
+The domain directory (C:/Oracle/Middleware/user_projects/domains/base_domain) was created.
+
+. Stop the Admin Server
+To stop the Admin Server, press Ctrl + C in the terminal where it is running.
+Alternatively, use the stopWebLogic.cmd script:
+
+
+
+Troubleshooting Tips
+If you encounter any issues in the future, refer to the logs for detailed error messages:
+
+Admin Server logs
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\logs\AdminServer.log
+
+C:\Users\rhoum\AppData\Local\Temp\OraInstall<timestamp>\install<timestamp>.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ASCII-style diagram
+
+ghp_rTh6sx72NA5zEeJDHz0rw6dbSzKkUHP0GOR5i
