@@ -1,0 +1,13 @@
+server:
+  port: 8443 # Port for HTTPS
+  ssl:
+    enabled: true # Enable SSL/TLS
+    key-store: classpath:keystore.jks # Path to the keystore file
+    key-store-password: changeit # Password for the keystore
+    key-store-type: JKS # Keystore type (Java KeyStore)
+    key-alias: myapp # Alias for the key entry
+
+
+# Custom application property
+app:
+  greeting: "Hello from application.yml!"
