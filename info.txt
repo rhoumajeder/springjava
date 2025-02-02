@@ -90,3 +90,29 @@ C:\Users\rhoum\AppData\Local\Temp\OraInstall<timestamp>\install<timestamp>.log
 ASCII-style diagram
 
 ghp_rTh6sx72NA5zEeJDHz0rw6dbSzKkUHP0GOR5i
+
+
+================
+
+Fix path maven and java
+# Add Maven bin directory to PATH
+$env:PATH += ";C:\Users\U105450\apache-maven-3.9.6\apache-maven-3.9.6\bin"
+
+# Verify Maven installation
+Test-Path "C:\Users\U105450\apache-maven-3.9.6\apache-maven-3.9.6\bin\mvn.cmd"
+
+# Set JAVA_HOME
+$env:JAVA_HOME = "C:\Users\U105450\Repository\jdk\OpenJDK8U-jdk_x86-32_windows_hotspot_8u432b06\jdk8u432-b06"
+
+# Add JDK bin directory to PATH
+$env:PATH += ";$env:JAVA_HOME\bin"
+
+# Verify JAVA_HOME
+[System.Environment]::GetEnvironmentVariable("JAVA_HOME", [System.EnvironmentVariableTarget]::User)
+$env:JAVA_HOME
+
+# Verify Java installation
+java -version
+
+# Verify Maven installation
+mvn -v
